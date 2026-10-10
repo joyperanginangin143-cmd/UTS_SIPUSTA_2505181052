@@ -18,6 +18,8 @@ public class CobaKeGit {
         System.out.println("wowoow");
         System.out.println("wowqoow");
         System.out.println("tes3");
+        System.out.println("tes3");
+        System.out.println("tes4");
     }
     
 }
