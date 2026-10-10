@@ -16,6 +16,7 @@ public class CobaKeGit {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("wowoow");
+        System.out.println("wowqoow");
     }
     
 }
