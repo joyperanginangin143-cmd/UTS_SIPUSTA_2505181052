@@ -9,6 +9,9 @@ import eksepsi.*;
 public class KatalogPerpustakaan {  
     private final List<Koleksi> daftarKoleksi = new ArrayList<>(); 
     private final List<Koleksi> daftarDipinjam = new ArrayList<>();
+    public List<Koleksi> semuaKoleksi() {
+        return new ArrayList<>(daftarKoleksi);
+    }
     
     public void tambahKoleksi(Koleksi koleksiBaru) { 
         daftarKoleksi.add(koleksiBaru); 

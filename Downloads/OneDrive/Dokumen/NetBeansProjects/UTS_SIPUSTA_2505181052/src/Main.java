@@ -2,6 +2,8 @@ import model.*;
 import layanan.*;
 import java.util.List;
 import eksepsi.*;
+import berkas.*;
+import java.io.IOException;
 
 public class Main {
     public static void main(String[] args){
@@ -75,6 +77,13 @@ public class Main {
             System.out.println("DITOLAK: " + e.getMessage());
         }
         
-        
+    System.out.println(" --------------- EKSPOR LAPORAN SIPUSTA  --------------");
+    EksporKatalog eksporKatalog = new EksporKatalog();
+    try {
+            eksporKatalog.tulisKatalog("katalog.txt", katalog.semuaKoleksi());
+            System.out.println("SUKSES: File 'katalog.txt' berhasil di produksi");
+        } catch (IOException e) {
+            System.out.println("File .txt gagal di produksi: " + e.getMessage());
+        }    
     }
 }

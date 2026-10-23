@@ -30,12 +30,12 @@ public class Majalah extends Koleksi implements Terarsip {
     }
     
     @Override
-    public String getNomorRak() {
+    public String nomorRak() {
         return this.nomorRak;
     }
 
     @Override
-    public String getLokasiLantai() {
+    public String lokasiLantai() {
         return this.lokasiLantai;
     }
 }

@@ -22,4 +22,12 @@ public abstract class Koleksi {
     public String getJudul(){
         return judul;
     }
+    
+    public String getKodeKoleksi(){
+        return kodeKoleksi;
+    }
+    
+    public int getTahunTerbit(){
+        return tahunTerbit;
+    }
 }

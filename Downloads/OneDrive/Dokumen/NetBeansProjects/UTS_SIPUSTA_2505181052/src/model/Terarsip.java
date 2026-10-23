@@ -2,10 +2,10 @@ package model;
 
 public interface Terarsip {
    
-    String getNomorRak(); 
-    String getLokasiLantai(); 
+    String nomorRak(); 
+    String lokasiLantai(); 
 
     default String ringkasanArsip() {
-        return "Lantai: " + getLokasiLantai() + " | Rak: " + getNomorRak() + " | ";
+        return "Lantai: " + lokasiLantai() + " | Rak: " + nomorRak() + " | ";
     }
 }
