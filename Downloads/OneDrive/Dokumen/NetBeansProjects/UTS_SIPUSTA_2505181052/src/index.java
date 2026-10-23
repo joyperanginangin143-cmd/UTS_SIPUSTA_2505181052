@@ -14,9 +14,9 @@ public class index {
     System.out.println(BK002.deskripsi() + " | Kelayakan Pinjam : " + BK002.layakDipinjam());
     
     System.out.println(MJ001.deskripsi() + " | Kelayakan Pinjam : " + MJ001.layakDipinjam());
-    System.out.println(MJ002.deskripsi() + " | Kelayakan Pinjam : " + MJ001.layakDipinjam());
+    System.out.println(MJ002.deskripsi() + " | Kelayakan Pinjam : " + MJ002.layakDipinjam());
     
     System.out.println(BD001.deskripsi() + " | Kelayakan Pinjam : " + BD001.layakDipinjam());
-    System.out.println(BD002.deskripsi() + " | Kelayakan Pinjam : " + BD001.layakDipinjam());
+    System.out.println(BD002.deskripsi() + " | Kelayakan Pinjam : " + BD002.layakDipinjam());
 }
 }
