@@ -1,6 +1,7 @@
 import model.*;
 import layanan.*;
 import java.util.List;
+import eksepsi.*;
 
 public class index {
     public static void main(String[] args){
@@ -48,6 +49,32 @@ public class index {
             String status = k.layakDipinjam() ? "BISA DIPINJAM" : "TIDAK BISA DIPINJAM";
             System.out.println(k.deskripsi() + " | Status: " + status);
         }
+        
+    System.out.println("========== PEMINJAMAN BARANG ==========");
+    System.out.println("Meminjam BK-002 ");
+    
+        try {
+            katalog.pinjam(BK002);
+            
+        } catch (PustakaException e) {
+            // Akan menangkap KoleksiTidakLayakException
+            System.out.println("DITOLAK: " + e.getMessage());
+        }
+        
+        System.out.println("");
+        //  meminjam koleksi yg bagus, lalu coba pinjam koleksi yang sama lagi
+        System.out.println("Meminjam BK-001 ");
+        try {
+            katalog.pinjam(BK001); 
+            System.out.println("");
+            System.out.println(" Mencoba meminjam BK-001 LAGI untuk mahasiswa lain ");
+            katalog.pinjam(BK001); // Hasilnya gagal karena BK-001 sudah dibawa keluar
+            
+        } catch (PustakaException e) {
+            // Akan menangkap KoleksiSedangDipinjamException
+            System.out.println("DITOLAK: " + e.getMessage());
+        }
+        
+        
     }
 }
-

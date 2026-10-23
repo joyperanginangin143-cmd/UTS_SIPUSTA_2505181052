@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.List; 
 import model.Koleksi; 
 import java.util.Comparator;
+import eksepsi.*;
 
-public class KatalogPerpustakaan { 
-    
+public class KatalogPerpustakaan {  
     private final List<Koleksi> daftarKoleksi = new ArrayList<>(); 
+    private final List<Koleksi> daftarDipinjam = new ArrayList<>();
     
     public void tambahKoleksi(Koleksi koleksiBaru) { 
         daftarKoleksi.add(koleksiBaru); 
@@ -27,4 +28,17 @@ public class KatalogPerpustakaan {
     }
     
     
+    // Soal 5
+    public void pinjam(Koleksi k) throws PustakaException {
+        if (!k.layakDipinjam()) {
+            throw new KoleksiTidakLayakException(k.getJudul());
+        }
+        
+        if (daftarDipinjam.contains(k)) {
+            throw new KoleksiSedangDipinjamException(k.getJudul());
+        }
+        
+        daftarDipinjam.add(k);
+        System.out.println("SUKSES: Koleksi '" + k.getJudul() + "' berhasil dipinjam!");
+    }
 }
