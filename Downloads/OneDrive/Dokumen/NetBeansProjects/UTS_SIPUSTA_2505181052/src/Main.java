@@ -77,7 +77,7 @@ public class Main {
             System.out.println("DITOLAK: " + e.getMessage());
         }
         
-    System.out.println(" --------------- EKSPOR LAPORAN SIPUSTA  --------------");
+    System.out.println(" --------------- EKSPOR LAPORAN SIPUSTA  ---------------");
     EksporKatalog eksporKatalog = new EksporKatalog();
     try {
             eksporKatalog.tulisKatalog("katalog.txt", katalog.semuaKoleksi());
