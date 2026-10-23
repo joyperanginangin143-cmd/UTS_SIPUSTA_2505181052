@@ -3,7 +3,7 @@ import layanan.*;
 import java.util.List;
 import eksepsi.*;
 
-public class index {
+public class Main {
     public static void main(String[] args){
     
     KatalogPerpustakaan katalog = new KatalogPerpustakaan();
