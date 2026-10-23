@@ -1,5 +1,7 @@
 import model.*;
 import layanan.*;
+import java.util.List;
+
 public class index {
     public static void main(String[] args){
     
@@ -34,5 +36,18 @@ public class index {
     katalog.tambahKoleksi(BD001);
     
     katalog.cetakStatus();
+    
+    System.out.println(" ---------------------------------------------------------");
+    System.out.println(" ---------------------------------------------------------");
+   
+    System.out.println("");
+    System.out.println("=========== DAFTAR KOLEKSI ===========");
+        List<Koleksi> daftarYangSudahDiurutkan = katalog.urut(new UrutLayakLaluJudul());
+       
+        for (Koleksi k : daftarYangSudahDiurutkan) {
+            String status = k.layakDipinjam() ? "BISA DIPINJAM" : "TIDAK BISA DIPINJAM";
+            System.out.println(k.deskripsi() + " | Status: " + status);
+        }
     }
 }
+

@@ -18,4 +18,8 @@ public abstract class Koleksi {
     }
 
     public abstract boolean layakDipinjam(); 
+    
+    public String getJudul(){
+        return judul;
+    }
 }
