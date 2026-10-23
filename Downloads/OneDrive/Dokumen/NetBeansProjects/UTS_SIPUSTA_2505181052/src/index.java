@@ -1,6 +1,9 @@
 import model.*;
+import layanan.*;
 public class index {
     public static void main(String[] args){
+    
+    KatalogPerpustakaan katalog = new KatalogPerpustakaan();
     
     BukuCetak BK001 = new BukuCetak("BK-001", "Java How to Program", 2022, 620, "rak A-12", "Lantai 1", false);
     BukuCetak BK002 = new BukuCetak("BK-002", "Basis Data Relasional", 2021, 410, "rak B-04", "Lantai 1", true);
@@ -20,5 +23,16 @@ public class index {
     
     System.out.println(BD001.deskripsi() + " |  Kelayakan Pinjam : " + BD001.layakDipinjam());
     System.out.println(BD002.deskripsi() + " |  Kelayakan Pinjam : " + BD002.layakDipinjam());
-}
+   
+    System.out.println(" ------------------------------------------------ ---------");
+    System.out.println(" ---------------------------------------------------------");
+    katalog.tambahKoleksi(BK001);
+    katalog.tambahKoleksi(BK002);
+    katalog.tambahKoleksi(MJ001);
+    katalog.tambahKoleksi(MJ002);
+    katalog.tambahKoleksi(BD001);
+    katalog.tambahKoleksi(BD001);
+    
+    katalog.cetakStatus();
+    }
 }
