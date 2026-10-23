@@ -14,6 +14,7 @@ public class index {
     System.out.println(BK001.deskripsi() + " | " + BK001.ringkasanArsip() + " Kelayakan Pinjam : " + BK001.layakDipinjam());
     System.out.println(BK002.deskripsi() + " | " + BK002.ringkasanArsip() + " Kelayakan Pinjam : " + BK002.layakDipinjam());
     
+
     System.out.println(MJ001.deskripsi() + " | " + MJ001.ringkasanArsip() + "  Kelayakan Pinjam : " + MJ001.layakDipinjam());
     System.out.println(MJ002.deskripsi() + " | " + MJ002.ringkasanArsip() + "  Kelayakan Pinjam : " + MJ002.layakDipinjam());
     
