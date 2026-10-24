@@ -16,8 +16,8 @@ public class Main {
     Majalah MJ001 = new Majalah("MJ-001", "Info Teknologi Edisi 88", 2026, "edisi 88", "Agustus", "rak MJ-01", "Lantai 1", true);
     Majalah MJ002 = new Majalah("MJ-002", "Info Teknologi Edisi 87", 2026, "edisi 87", "Juli", "rak MJ-02", "Lantai 2",false);
    
-    BerkasDigital BD001 = new BerkasDigital("BD-001", "Panduan Pemrograman Java", 2025, 8, "unduh.polmed.ac.id/bd002");
-    BerkasDigital BD002 = new BerkasDigital("BD-001", "Panduan Pemrograman Java", 2025, 8, "unduh.polmed.ac.id/bd002");
+    BerkasDigital BD001 = new BerkasDigital("BD-001", "Panduan Pemrograman Java", 2024, 15, "unduh.polmed.ac.id/bd001");
+    BerkasDigital BD002 = new BerkasDigital("BD-002", "Jurnal Rekayasa Perangkat", 2025, 8, "unduh.polmed.ac.id/bd002");
     
     System.out.println(BK001.deskripsi() + " | " + BK001.ringkasanArsip() + " Kelayakan Pinjam : " + BK001.layakDipinjam());
     System.out.println(BK002.deskripsi() + " | " + BK002.ringkasanArsip() + " Kelayakan Pinjam : " + BK002.layakDipinjam());
@@ -36,7 +36,7 @@ public class Main {
     katalog.tambahKoleksi(MJ001);
     katalog.tambahKoleksi(MJ002);
     katalog.tambahKoleksi(BD001);
-    katalog.tambahKoleksi(BD001);
+    katalog.tambahKoleksi(BD002);
     
     katalog.cetakStatus();
     
@@ -77,7 +77,7 @@ public class Main {
             System.out.println("DITOLAK: " + e.getMessage());
         }
         
-    System.out.println(" --------------- EKSPOR LAPORAN SIPUSTA  ---------------");
+    System.out.println(" --------------- EKSPOR LAPORAN SIPUSTA  ----------------");
     EksporKatalog eksporKatalog = new EksporKatalog();
     try {
             eksporKatalog.tulisKatalog("katalog.txt", katalog.semuaKoleksi());
